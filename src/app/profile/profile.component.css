@@ -1,0 +1,47 @@
+body{
+    color: white;
+}
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+h5{text-align: center;}
+h3,p{
+  margin-top: 10px;
+  text-align: center;
+}
+
+h5{text-align: center;}
+h3,p{
+margin-top: 10px;
+text-align: center;
+}
+.bg{
+background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../../assets/back.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+}
+.form-container{
+border: 1px solid white;
+padding: 50px 60px;
+margin-top: 20vh;
+-webkit-box-shadow: 1px 4px 26px 0px rgba(163,153,163,0.75);
+-moz-box-shadow: 1px 4px 26px 0px rgba(163,153,163,0.75);
+box-shadow: 1px 4px 26px 0px rgba(163,153,163,0.75);
+ 
+}
+
+
+@media screen and (max-width:600px)
+{
+
+  .profile
+{
+  padding: 140px 30px;
+}
+}

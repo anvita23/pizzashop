@@ -1,0 +1,21 @@
+.menupage{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../../assets/back.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+color: white;
+}
+.box{
+    background-color: white;
+    padding: 10px 20px;
+    
+}
+@media screen and (max-width:600px){
+    .menupage{
+        background-color: #eff6ff;
+        padding: 50px 10px;
+    }
+    
+}

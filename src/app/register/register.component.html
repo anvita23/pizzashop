@@ -1,0 +1,42 @@
+<section class="register">
+    <div class="container-fluid bg">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+        <form class="form-container" (ngSubmit)="addUser()"  #myForm="ngForm"> 
+            <div class="form-group">
+                <h5>If Already Registered Please Click below</h5>
+            <input type="button" class="btn btn-danger w-100"(click)="gotologin()" value="Go to Login">  
+            <h3>Or</h3>
+                <h3><b>Register Here</b></h3>
+                <label for="name">Full name:*</label>
+                <input type="text" class="form-control" pattern="[A-Za-z\s]+" name="name" placeholder="Enter your full name" #name="ngModel" required [(ngModel)]="user.name">
+                <div class="alert alert-danger" *ngIf="name.invalid && name.dirty">Alphabets are required</div>
+                <label for="address">Address:*</label>
+                <input type="text" class="form-control" minlength=10 placeholder="Enter your Delivery Address" name="address" #address="ngModel" [(ngModel)]="user.address" required>
+                <div class="alert alert-danger" *ngIf="address.invalid && address.touched">Full address is required</div>
+                <label for="email">Email ID:*</label>
+                <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email" name="email" required #email="ngModel" required [(ngModel)]="user.email">
+                <small id="help" class="form-text-muted">We'll never share your email with anyone else.</small>
+                <div class="alert alert-danger" *ngIf="email.invalid && email.dirty">abc@abc.com format required</div>
+                <br><label for="mobile">Phone number:*</label>
+                <input type="tel" class="form-control" maxlength=10 name="mobile" pattern="[0-9]{10}" placeholder="Enter your phone number" required #tel="ngModel" [(ngModel)]="user.mobile">
+                <div class="alert alert-danger" *ngIf="tel.invalid && tel.dirty">10 numerical digits required</div>
+              </div>
+              <label for="password">Password:*</label>
+              <input type="password" class="form-control"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              placeholder="Enter your password" name="password" required [(ngModel)]="user.password">
+              <small id="help" class="form-text-muted">Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters</small>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">I agree to all the T&C</label>
+            </div>
+            <input type="button" (click)="addUser()" class="btn btn-success w-100"[disabled]="!myForm.form.valid" type="submit" value="Submit">
+            <small id="help" class="form-text-muted">* indicates required fields</small>
+            </form>
+        </div>    
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+    </div>
+
+</section>

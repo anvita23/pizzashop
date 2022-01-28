@@ -1,0 +1,15 @@
+<section class="menu">
+    <div class="container">
+        <h1 class="text-center">Our Menu</h1>
+        <div class="row mt-5" >
+            <div class="col-lg-3 mb-5" *ngFor="let x of categories">
+                <div class="box shadow-sm">
+                    <img src="{{x.image}}" width=100%>
+                    <h4 class="mt-2">{{x.name}}</h4>
+                    <p class="mt-2">{{x.description}}</p>
+                    <button class="btn btn-primary btn-sm" [routerLink]="['/menu',x.id]">Explore More</button>
+                </div>
+            </div>
+</div>
+        </div>
+</section>

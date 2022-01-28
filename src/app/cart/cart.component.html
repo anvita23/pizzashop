@@ -1,0 +1,28 @@
+<section class="cart bg">
+  <div class="container-fluid">
+  <div class="Header">
+    <h3 class="Heading">Shopping Cart</h3>
+    </div>
+    <div class="Cart-Items" *ngFor="let x of shoppingcart">
+      <div class="image-box">
+      <img src={{x.image}} style="height:120px">
+      </div>
+      <div class="about">
+      <h6 class="title">{{x.name}}</h6>
+      </div>
+      <div class="counter">{{x.qty}}</div>
+      <div class="price">{{x.price}}</div>
+      <div class="prices">
+        <div class="amount">{{x.total | currency:'INR'}}</div>
+        <div class="remove" (click)="delete(x)"><u>Remove</u></div>
+      </div>
+      </div>
+      <hr> 
+      <div class="checkout">
+      <div class="total">
+      <div class="total-amount">{{grandtotal() | currency:'INR'}}</div>
+      </div>
+      <button class="button" [routerLink]="['/payment']">Checkout</button>
+      </div>
+  </div>
+</section>

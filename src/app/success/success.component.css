@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #E3F0FF, hsl(216, 58%, 49%));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+ 
+   .Header{
+    margin: auto;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .Heading{
+    font-size: 20px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: black;
+   }
+   .Cart-Items{
+    margin: auto;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .image-box{
+    width: 15%;
+    text-align: center;
+   }
+   .about{
+    height: 100%;
+   }
+   .title{
+    padding-top: 5px;
+    line-height: 10px;
+    font-size: 29px;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    color: black;
+   }
+   .prices{
+    height: 100%;
+    text-align: right;
+   }
+   .amount{
+    padding-top: 20px;
+    font-size: 26px;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    color: black;
+   }
+   hr{
+    width: 100%;
+    
+   }
+   .checkout{
+    float: right;
+    margin-right: 5%;
+    width: 28%;
+   }
+   .total{
+    width: 100%;
+   
+   }
+   .items{
+    font-size: 16px;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    color: #909090;
+    line-height: 10px;
+   }
+   .total-amount{
+    font-size: 36px;
+    font-family: 'Open Sans';
+    font-weight: 900;
+    float: right;
+    color: #202020;
+   }
+   .bg{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../../assets/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+  }

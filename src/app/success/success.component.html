@@ -1,0 +1,29 @@
+<section class="success container">
+    <h1 class="text-center mb-5">Your order is Confirmed!!</h1>
+    <h1 class="text-center mb-5"> Thanks for ordering with Us. Now Sit Back And Relax!!</h1>
+    <div class="container-fluid">
+        <div class="Header">
+          <h3 class="Heading">Your Final Order</h3>
+          </div>
+          <div class="Cart-Items" *ngFor="let x of ordersuccessful">
+            <div class="image-box">
+            <img src={{x.image}} style="height:120px">
+            </div>
+            <div class="about">
+            <h6 class="title">{{x.name}}</h6>
+            </div>
+            <div class="counter">{{x.qty}}</div>
+            <div class="price">{{x.price}}</div>
+            <div class="prices">
+              <div class="amount">{{x.total | currency:'INR'}}</div>
+            </div>
+            </div>
+            <hr> 
+            <div class="checkout">
+            <div class="total">
+            <div class="total-amount">{{grandtotal() | currency:'INR'}}</div>
+            </div>
+            </div>
+        </div>
+
+</section>

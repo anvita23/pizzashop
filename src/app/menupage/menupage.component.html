@@ -1,0 +1,59 @@
+<section class="menupage">
+    <div class="container">
+        
+        <div class="row mt-5" *ngIf="menutype == 1">
+            <h1 class="text-center">Veg Pizza</h1>
+            <div class="col-lg-3 mb-5" *ngFor="let x of vegpizza">
+                <div class="box shadow-sm  ">
+                    <img src="{{x.image}}" width=100%>
+                    <h4 class="mt-2">{{x.name}}</h4>
+                    <p class="mt-2">{{x.description}}</p>
+                    <h3 class="mt-2">{{x.price | currency :'INR'}}</h3>
+                    <button class="btn btn-primary btn-sm" (click)="addtocart(x)">Add to Cart</button>
+                </div> 
+            </div>
+            
+</div>
+<div class="row mt-5" *ngIf="menutype == 2">
+    <h1 class="text-center">Non Veg Pizza</h1>
+    <div class="col-lg-3 mb-5" *ngFor="let x of nonvegpizza">
+        <div class="box shadow-sm  ">
+            <img src="{{x.image}}" width=100%>
+            <h4 class="mt-2">{{x.name}}</h4>
+            <p class="mt-2">{{x.description}}</p>
+            <h3 class="mt-2">{{x.price | currency :'INR'}}</h3>
+            <button class="btn btn-primary btn-sm"(click)="addtocart(x)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<div class="row mt-5" *ngIf="menutype == 3">
+    <h1 class="text-center">Sides and Beverages</h1>
+    <div class="col-lg-3 mb-5" *ngFor="let x of sides">
+        <div class="box shadow-sm  ">
+            <img src="{{x.image}}" width=100%>
+            <h4 class="mt-2">{{x.name}}</h4>
+            <p class="mt-2">{{x.description}}</p>
+            <h3 class="mt-2">{{x.price | currency :'INR'}}</h3>
+            <button class="btn btn-primary btn-sm" (click)="addtocart(x)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<div class="row mt-5" *ngIf="menutype == 4">
+    <h1 class="text-center">Pasta</h1>
+    <div class="col-lg-3 mb-5" *ngFor="let x of pasta">
+        <div class="box shadow-sm  ">
+            <img src="{{x.image}}" width=100%>
+            <h4 class="mt-2">{{x.name}}</h4>
+            <p class="mt-2">{{x.description}}</p>
+            <h3 class="mt-2">{{x.price | currency :'INR'}}</h3>
+            <button class="btn btn-primary btn-sm" (click)="addtocart(x)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        </div>
+</section>

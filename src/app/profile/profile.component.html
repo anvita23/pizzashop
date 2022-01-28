@@ -1,0 +1,45 @@
+<section class="profile">
+<body class="bg">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <h1>Hello {{userdetails!.name}} </h1>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+            <h4>Your Details are:</h4>
+                <div class="Cart-Items" ></div>
+                    <div class="counter">EmaildID:{{userdetails!.email}}</div>
+                    <div class="price">Address:{{userdetails!.address}}</div>
+                    <div class="price">Phone:{{userdetails!.mobile}}</div>
+                    </div>
+        </div>   
+        <button class="btn btn-danger"(click)="logoutuser()">Logout</button><br>
+        <button class="btn btn-primary"(click)="isupdate()">Change User Details</button> <br>
+        <div *ngIf="update">
+            <form class="form-container" #myForm="ngForm"> 
+                <div class="form-group">
+                    <label for="name">Full name:*</label>
+                    <input type="text" class="form-control" pattern="[A-Za-z\s]+" name="name"  #name="ngModel" required [(ngModel)]="edituser.name">
+                    <div class="alert alert-danger" *ngIf="name.invalid && name.dirty">Alphabets are required</div>
+                    <label for="address">Address:*</label>
+                    <input type="text" class="form-control" minlength=10 name="address" #address="ngModel" [(ngModel)]="edituser.address" required>
+                    <div class="alert alert-danger" *ngIf="address.invalid && address.touched">Full address is required</div>
+                    <label for="mobile">Phone number:*</label>
+                    <input type="tel" class="form-control" maxlength=10 name="mobile" pattern="[0-9]{10}" required #tel="ngModel" [(ngModel)]="edituser.mobile">
+                    <div class="alert alert-danger" *ngIf="tel.invalid && tel.dirty">10 numerical digits required</div>
+                   <label for="password">Password:*</label>
+                    <input type="password" class="form-control"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    name="password" required [(ngModel)]="edituser.password">
+                    <small id="help" class="form-text-muted">Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters</small>                    
+                </div>
+                  <br>
+                <input type="button" (click)="updateuser()" class="btn btn-success w-100" [disabled]="!myForm.form.valid"type="submit" value="Submit">
+                <small id="help" class="form-text text-muted">* indicates required fields</small>
+            
+                </form>
+                <div *ngIf="changeduser"class="alert alert-success">User Details Successfully Changed.</div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+    
+</body>
+</section>
